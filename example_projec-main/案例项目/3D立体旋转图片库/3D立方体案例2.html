@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>3D立方体</title>
+		<style>
+			#wrap{
+				width: 200px;
+				height: 200px;
+				margin: 200px auto;
+				animation: rotate 20s infinite;
+				
+				/* 设置，在3D空间中展现 */
+				transform-style: preserve-3d;
+				animation-timing-function: linear;
+			}
+			
+			#wrap span{
+				display:block;
+				width:100px;
+				height:100px;
+				background-color:#7962F8 ;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+			}
+			
+			/* 设置图片的大小 */
+			#wrap img{
+				width: 100%;
+				height: 100%;
+			}
+			
+			/* 第一步，旋转正方形，进行组装 */
+			
+			/* 第一，前面部分 */
+			#in-front{
+				transform: translateZ(50px);
+			}
+			
+			#in-back{
+				transform: translateZ(-50px);
+			}
+			
+			#in-left{
+				transform: rotateY(90deg) translateZ(50px);
+			}
+			
+			#in-right{
+				transform: rotateY(-90deg) translateZ(50px);
+			}
+			
+			#in-top{
+				transform: rotateX(90deg) translateZ(50px);
+			}
+			
+			#in-bottom{
+				transform: rotateX(-90deg) translateZ(50px);
+			}
+			
+			/* 动态函数 @keyframe */
+			@keyframes  rotate{
+				from{
+					transform: rotateX(0deg) rotateY(0deg);
+				}
+				to{
+					transform: rotateX(360deg) rotateY(360deg);
+				}
+			}
+			
+			/* 设置，外层的立方体的相关css */	
+			#wrap div{
+				width: 200px;
+				height: 200px;
+				background-color: lightcoral;
+				position: absolute;
+				transition: all 0.4s;
+			}
+			
+			#wrap
+			
+			/* 设置旋转角度 */
+			#out-front{
+				transform: translateZ(100px);
+			}
+			
+			#out-back{
+				transform: translateZ(-100px);
+			}
+			
+			#out-left{
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			
+			#out-right{
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			
+			#out-top{
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			
+			#out-bottom{
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			
+			/* 设置外层鼠标事件 */
+			#wrap:hover #out-front{
+				transform: translateZ(200px);
+			}
+			#wrap:hover #out-back{
+				transform: translateZ(-200px);
+			}
+			#wrap:hover #out-left{
+				transform: rotateY(90deg) translateZ(200px);
+			}
+			#wrap:hover #out-right{
+				transform: rotateY(-90deg) translateZ(200px);
+			}
+			#wrap:hover #out-top{
+				transform: rotateX(90deg) translateZ(200px);
+			}
+			#wrap:hover #out-bottom{
+				transform: rotateX(-90deg) translateZ(200px);
+			}
+			
+			
+					
+		</style>
+		
+	</head>
+	<body>
+		<!-- 第一步，准备一个包裹器 -->
+		<div id="wrap">
+			<!-- 第二步，先组装内部的立方体 -->
+			<span id="in-front"><img src="img/拯救姬红.jpg" alt=""></span>
+			<span id="in-back"><img src="img/拯救姬蓝.jpg" alt=""></span>
+			<span id="in-left"><img src="img/拯救姬白.jpg" alt=""></span>
+			<span id="in-right"><img src="img/拯救姬红1.jpg" alt=""></span>
+			<span id="in-top"><img src="img/拯救姬白.jpg" alt=""></span>
+			<span id="in-bottom"><img src="img/拯救姬白1.jpg" alt=""></span>
+			
+			<!-- 第三步，组装外层的立方体 -->
+			<div id="out-front"><img src="img/拯救姬红2.jpg" alt=""></div>
+			<div id="out-back"><img src="img/拯救姬蓝1.jpg" alt=""></div>
+			<div id="out-left"><img src="img/拯救姬蓝2.png" alt=""></div>
+			<div id="out-right"><img src="img/拯救姬红3.jpg" alt=""></div>
+			<div id="out-top"><img src="img/拯救姬红.jpg" alt=""></div>
+			<div id="out-bottom"><img src="img/拯救姬蓝3.png" alt=""></div>
+			
+		</div>
+	</body>
+</html>

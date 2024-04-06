@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css页面布局</title>
+	<link rel="stylesheet" href="./css/响应式css.css">
+</head>
+<body>
+	<div class="header">
+	  <h1 style="color:#ff0000">美文阅读</h1>
+	</div>
+
+	<div class="topnav">
+	  <a href="响应式多栏布局.html">响应式多栏布局</a>
+	  <a href="多列布局.html">多列布局</a>
+	  <a href="#" style="float:right">关于</a>
+	</div>
+	<br/>
+
+	<div class="topnav">
+	  <a href="#">情感美文</a>
+	  <a href="#">哲理美文</a>
+	  <a href="#">经典美文</a>
+	  <a href="#" style="float:right">关于</a>
+	</div>
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		<div class="articles">
+		  <h2>时光</h2>
+		  <h5>2019 年 4 月 17日</h5>
+		  <p>时光匆匆过，在我们的世界里，留下了什么。
+				我们在感叹，在无助的时候，我们能依靠谁，在年少时，懵懂无知，岁月慢慢地流逝，我们在欢笑与吵闹夹杂着丝丝的痛苦中度过。
+				慢慢地，我们在成长，在逐渐长大，一切都向我们涌来，我们就像是在打篮球，接住球，传球，投篮，一刻也不能停，有时我们累了，也只能是中场休息，过不久，还要上场。
+				时光慢慢地过，我们也在慢慢地成长，他就像一把把的冰刀刻蚀着我们的身体，我们不能反击，反击也显地那么无力，能放弃吗，不能，因为我的背后是悬崖，放弃就等于跌入悬崖，放弃这场生命，时间从某种意义上对你来说就是永恒了，就是永恒的黑夜，永恒的灭亡。
+				我们在享受着生命之美，时刻提醒我们，不能放弃，要坚强地活下去，其实生命的本质就是快乐，享受着生命的过程，趋利避害，这是生物的本质。
+				时光之美，时光也有美丽的地方吗。是，有的，随着时光的向前迈进，我们经历了阴晴圆缺，随着时光的迈进，我们度过了春夏秋冬，随着时光的迈进，我们尝到了喜怒哀乐，随着时光的迈进，我们结束了生命，感受了生死轮回，时光就是这一切的主宰。
+				时光是一位旁观者，默默地观察着，他知道一切，美丽的，丑陋的，善良的，邪恶的，真诚的，虚伪的，还有种种，都逃不过他的眼睛，都将随着时光远去。
+				时光是一位美丽的女神，她见证了自然的一切，她每日都在耕耘着，为了这宇宙的运作，为了这世间美丽或丑陋的嘴脸翻转进行下去。
+				时光无时不在观察着芸芸众生是邪恶，是善良，他一目了然，善恶终将会有报，他会让这一切都归于平静，然后，又充生出矛盾。
+				时光是一位无穷无尽的长眠者，那些在他所溟灭的物体，都将与他一同长眠，慢慢地睡去，睡去，在睡梦中魂游天际，无所不往。
+				时光带给了我们一切，也必将收回我们的一切，我们的一切都将沉浸于时光之中，漫游在时光之中，太阳带给了大地阳光，无穷无尽的速度在约束着他，时光也在上面添油加醋。
+				科技能打破一切迷信和无知与封建，但是，面对浩瀚宇宙，人类真的很渺小，科技能实现人们的所有梦想，但是，前提是，需要时间，人们的梦想就像是时光一样，永无止境，不断前行。
+				所以，当我们安静下来的时候，不妨来感受一下时光之美带给我们的美好体验，在这茫茫短暂的人身旅途中，快乐才是最重要的，我们要把握住自己的内心，跟上时光的步伐，慢慢地，慢慢地，起航我们的人生，我们要时刻品尝美味的果实，不断奖励自己，把自己的这一短暂的人生过得富足，最后，再静静地拥抱时光之美。
+			</p>
+			</div>
+		  <div class="fakeimg" >
+			  <img src="images/img1.png"  >
+		  </div>
+		  
+		</div>
+		<div class="card">
+		  <h2 >写作意义</h2>
+		  <h5>2019 年 4 月 17日</h5>
+		  <p>
+			人的一生是很短暂的，只有几十年的光阴。
+			很多人直到钻入了骨灰盒，仍然不明白自己为什么活过一生。
+			而通过写作，可以用文字将自己的想法永久地记录下来并流传后代。
+			如果说一个人的人生有意义或价值的话，其意义和价值或许就在这里了。
+			</p>  
+		  <div class="fakeimg" >
+				<img src="images/img2.jpg"  >
+		  </div> 
+		</div>
+		<div class="card">
+			<h2>视频和音频</h2>
+			<div style="text-align:center">
+			   <div>视频</div>
+			  <button onclick="playPause()">播放/暂停</button> 
+			  <button onclick="makeBig()">放大</button>
+			  <button onclick="makeSmall()">缩小</button>
+			  <button onclick="makeNormal()">普通</button>
+			  <br> 
+			  <video id="video1" width="420">
+				<source src="video/mov_bbb.mp4" type="video/mp4">
+				<source src="video/mov_bbb.ogg" type="video/ogg">
+				您的浏览器不支持 HTML5 video 标签。
+				<track src="subtitles_en.vtt" kind="subtitles" srclang="en"
+				label="English">
+				<track src="subtitles_no.vtt" kind="subtitles" srclang="no"
+				label="Norwegian">
+			  </video>
+			  
+			  <script> 
+			  var myVideo=document.getElementById("video1"); 
+			  
+			  function playPause()
+			  { 
+				if (myVideo.paused) 
+				  myVideo.play(); 
+				else 
+				  myVideo.pause(); 
+			  } 
+			  
+				function makeBig()
+			  { 
+				myVideo.width=560; 
+			  } 
+			  
+				function makeSmall()
+			  { 
+				myVideo.width=320; 
+			  } 
+			  
+				function makeNormal()
+			  { 
+				myVideo.width=420; 
+			  } 
+			  </script> 
+			</div> 
+			
+			
+			<div style="text-align:center">
+				<div>音频</div>
+				<audio controls>
+				  <source src="video/horse.ogg" type="audio/ogg">
+				  <source src="video/horse.mp3" type="audio/mpeg">
+				您的浏览器不支持 audio 元素。
+				</audio>
+			</div>
+		</div>
+		
+	  </div>
+	  <div class="rightcolumn">
+		<div class="card">
+		  <h2>网站公告</h2>
+		  <P>公告内容</P>
+		</div>
+		<div class="card">
+		  <h3>热门文章</h3>
+		  <div class="fakeimg"><p>图片</p></div>
+		  <div class="fakeimg"><p>图片</p></div>
+		  <div class="fakeimg"><p>图片</p></div>
+		</div>
+		<div class="card">
+		  <h3>关注我</h3>
+		  <p>一些文本...</p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="footer">
+	  <h2>底部区域</h2>
+	</div>
+
+</body>
+</html>

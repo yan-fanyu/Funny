@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3弹性盒子模型演示</title>
+	<style type="text/css">
+	.wrapper{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-flow:row wrap;font-weight:bold;text-align:center}
+.wrapper > *{padding:10px;flex:1 100%}
+.header{background:tomato}
+.footer{background:white}
+.main{text-align:left;background:deepskyblue}
+.aside-1{background:gold}
+.aside-2{background:white}
+@media all and (min-width:600px){.aside{flex:1 auto}
+}
+@media all and (min-width:800px){.main{flex:2 0px}
+.aside-1{order:1}
+.main{order:2}
+.aside-2{order:3}
+.footer{order:4}
+}
+	</style>
+</head>
+<body>
+	
+	<div class="wrapper">
+	  <header class="header">
+		  <h1>岭南师范学院</h1>
+	  </header>
+	  <article class="main">
+	    <p>岭南师范学院（原湛江师范学院）是一所具有百年师范教育历史的广东省属普通本科院校，坐落在中国大陆最南端的美丽港城湛江市。学校1904年始设师范科教育，1978年更名为雷州师范专科学校，1991年升格更名为湛江师范学院，2014年更名为岭南师范学院。</p>  
+	  </article>
+	  <aside class="aside aside-1">
+	    <ul class="ul"> 
+	           <li><a  class="item" href="">首 页</a></li> 
+	            <li><a class="item" href="">学校概况</a></li> 
+	            <li><a class="item" href="">机构设置</a></li>
+	            <li><a class="item" href="">教育教学</a></li> 
+	    		 <li><a class="item" href="">学科科研</a></li> 	
+	    </ul> 
+	  </aside>
+	  <aside class="aside aside-2">
+		  <img src="images/img1.png">
+	  </aside>
+	     
+	  <footer class="footer">
+		  <p>岭南师范学院 Lingnan Normal University  版权所有:1996-- 岭南师范学院  粤ICP备15053357号 </br>
+校址：中国 广东 湛江赤坎区寸金路29号   邮编：524048   电话：86-759-3183226   传真：86-759-3341440<p>
+	
+</footer>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: pull-christmais
+  args:
+    - 'pull'
+    - 'gcr.io/$PROJECT_ID/christmais'
+- name: 'gcr.io/cloud-builders/docker'
+  id: build-christmais
+  waitFor: ['pull-christmais']
+  args: 
+    - build
+    - '-f=Dockerfile'
+    - '-t=gcr.io/$PROJECT_ID/christmais:$BUILD_ID'
+    - '-t=gcr.io/$PROJECT_ID/christmais'
+    - '--cache-from=gcr.io/$PROJECT_ID/christmais'
+    - '.'
+- name: 'gcr.io/$PROJECT_ID/christmais:$BUILD_ID'
+  id: run-checks
+  waitFor: ['build-christmais']
+images: ['gcr.io/$PROJECT_ID/christmais']
+timeout: 900s
+options:
+ machineType: 'N1_HIGHCPU_8'
